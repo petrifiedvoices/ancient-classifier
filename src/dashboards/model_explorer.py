@@ -64,7 +64,7 @@ st.write('Scenario 2: Imagine you are a museum archivist and you have found an u
 
 st.write('The Classifier is trained on the text of 50,000 inscriptions to come up with the most probable epigraphic classification.')
 
-st.subheader('Enter the text of the inscription to the Classifier and you will know what kind of inscription you are dealing with!')  
+st.info('Enter the text of the inscription to the Classifier and you will know what kind of inscription you are dealing with!')  
     
 user_input = st.text_area("Insert text", default_input)
 
@@ -103,16 +103,15 @@ if st.button('Classify me!'):
     )
 
 st.header("About Classifier")
-st.info('Authors: Petra Hermankova, Aarhus University, [ORCID:0000-0002-6349-0540](https://orcid.org/0000-0002-6349-0540) & Jan Kostkan, CHCAA, Aarhus University')
-
+st.write('Authors: Petra Hermankova, Aarhus University, [ORCID:0000-0002-6349-0540](https://orcid.org/0000-0002-6349-0540) & Jan Kostkan, CHCAA, Aarhus University')
 st.write('The model was trained on Latin inscriptions from the [Epigraphic Database Heidelberg](https://edh-www.adw.uni-heidelberg.de/).')
-st.write('[Source code](https://github.com/petrifiedvoices/ancient-classifier) forked from [CHCAA Ancient-classifier](https://github.com/centre-for-humanities-computing/ancient-classifier/). forked from the [Epigraphic Roads](https://github.com/sdam-au/epigraphic_roads/) project.')
+st.write('[Source code](https://github.com/petrifiedvoices/ancient-classifier), forked from [CHCAA Ancient-classifier](https://github.com/centre-for-humanities-computing/ancient-classifier/). Outcome of the [Epigraphic Roads](https://github.com/sdam-au/epigraphic_roads/) project.')
          
 # display image using streamlit
 # width is used to set the width of an image
 
 # st.image(img, width=200)    
-st.write('Any feedback is welcome at petra.hermankova@cas.au.dk!')
+st.write('We welcome any feedback or criticism at petra.hermankova@cas.au.dk!')
 # ===
 # More info about the model
 # ===
