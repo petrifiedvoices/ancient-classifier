@@ -62,9 +62,14 @@ st.header('What does it do?')
 st.write('Scenario 1: Imagine you are an archaeologist, excavating an ancient settlement and you have found an inscription with Latin text. You are not an expert on inscriptions, but knowing what kind of text you are dealing with, while still in the field, would help your immediate understanding of the archaeological situation and would help you guide the excavation in the right direction.')
 st.write('Scenario 2: Imagine you are a museum archivist and you have found an unlabelled inscription in the depository. You would like to be able to record in a museum catalogue its type, so the future experts can find it more easily.')
 
+st.info('Enter the text of the inscription to the Classifier and it will tell you what kind of inscription you are dealing with!')  
 st.write('The Classifier is trained on the text of 50,000 inscriptions to come up with the most probable epigraphic classification and its alternatives. However, you still should consult a human-epigrapher to be 100% sure!')
 
-st.info('Enter the text of the inscription to the Classifier and you will know what kind of inscription you are dealing with!')  
+st.header('How do I classify my text?')
+st.write('1. Choose the format of your text: a) does it have the original format as-is on inscriptions, including unexpanded abbreviations and no modern additions or reconstructions >>> choose `Text as-is`; b) does it have expanded abbreviations and modern reconstructions >>> choose `Reconstructed text`.')
+st.write('2. Insert the text into the input window below and click on the `Classify me!` button.')
+st.write('3. The classifical results will appear below. The closer any typological variant is to 1, the higher is the probability of your text belonging to that category. If ambiguous, too short, or too fragmentary, the text can easily belong to multiple categories, without one clear favourite.')
+st.write('Don\' forget - the Classifier is still experimentary and so may be the results!')
     
 user_input = st.text_area("Insert text", default_input)
 
