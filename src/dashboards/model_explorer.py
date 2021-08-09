@@ -57,10 +57,25 @@ with st.sidebar:
 # Classify input
 # ===
 st.title('Epigraphic Classifier for Latin inscriptions')
-st.write('This model assigns standard typologies of inscriptions to a given Latin text and shows the confidence of assigned classifications. The model was trained on inscriptions from the [Epigraphic Database Heidelberg](https://edh-www.adw.uni-heidelberg.de/).[Source code](https://github.com/centre-for-humanities-computing/ancient-classifier/), forked from the [Epigraphic Roads](https://github.com/sdam-au/epigraphic_roads/) project.')
 
-st.write('Authors: Petra Hermankova & Jan Kostkan, Aarhus University')
+st.header("What does it do?")
+st.write('Scenario 1: Imagine you are an archaeologist, excavating an ancient settlement and you have an inscription with Latin text. You are not an expert on inscriptions, but knowing what kind of inscriptions you are dealing while still in the field with would help your immediate understanding of the archaeological situation and would help you guide the excavation in the right direction.')
+st.write('Scenario 2: Imagine you are a museum archivist and you have found an unlabelled inscription. You would like to be able to record in a museum catalogue its type, so the future experts can find it more easily.')
 
+st.write('Enter the text of the inscription to the Classifier and you will know what kind of inscription you are dealing with!')
+
+st.info('Authors: Petra Hermankova, Aarhus University [ORCID:0000-0002-6349-0540](https://orcid.org/0000-0002-6349-0540) & Jan Kostkan, CHCAA, Aarhus University')
+
+st.write('This model assigns standard typologies of inscriptions to a given Latin text and shows the confidence of assigned classifications. The model was trained on Latin inscriptions from the [Epigraphic Database Heidelberg](https://edh-www.adw.uni-heidelberg.de/).')
+st.write('[Source code](https://github.com/petrifiedvoices/ancient-classifier) forked from [CHCAA Ancient-classifier](https://github.com/centre-for-humanities-computing/ancient-classifier/). forked from the [Epigraphic Roads](https://github.com/sdam-au/epigraphic_roads/) project.')
+         
+# display image using streamlit
+# width is used to set the width of an image
+
+# st.image(img, width=200)    
+st.write('Any feedback is welcome at petra.hermankova@cas.au.dk!')
+    
+    
 user_input = st.text_area("Insert text", default_input)
 
 if not isinstance(user_input, str):
@@ -69,7 +84,7 @@ if not isinstance(user_input, str):
 if len(user_input) > 1000:
     raise MemoryError('Input text too long. Max 1000 characters allowed')
 
-if st.button('Classify!'):
+if st.button('Classify me!'):
 
     if model_choice == 'Text as-is on inscriptions (conservative text)':
         transformer = mdl_prep_conservative
