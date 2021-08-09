@@ -58,11 +58,11 @@ with st.sidebar:
 # ===
 st.title('Epigraphic Classifier for Latin inscriptions')
 
-st.header("What does it do?")
+st.header('What does it do?')
 st.write('Scenario 1: Imagine you are an archaeologist, excavating an ancient settlement and you have found an inscription with Latin text. You are not an expert on inscriptions, but knowing what kind of text you are dealing with, while still in the field, would help your immediate understanding of the archaeological situation and would help you guide the excavation in the right direction.')
 st.write('Scenario 2: Imagine you are a museum archivist and you have found an unlabelled inscription in the depository. You would like to be able to record in a museum catalogue its type, so the future experts can find it more easily.')
 
-st.write('The Classifier is trained on the text of 50,000 inscriptions to come up with the most probable epigraphic classification.')
+st.write('The Classifier is trained on the text of 50,000 inscriptions to come up with the most probable epigraphic classification and its alternatives. However, you still should consult a human-epigrapher to be 100% sure!')
 
 st.info('Enter the text of the inscription to the Classifier and you will know what kind of inscription you are dealing with!')  
     
@@ -102,7 +102,7 @@ if st.button('Classify me!'):
         plot_bar_confidence(confidence_df)
     )
 
-st.header("About Classifier")
+st.header('About Classifier')
 st.write('Authors: Petra Hermankova, Aarhus University, [ORCID:0000-0002-6349-0540](https://orcid.org/0000-0002-6349-0540) & Jan Kostkan, CHCAA, Aarhus University')
 st.write('The model was trained on Latin inscriptions from the [Epigraphic Database Heidelberg](https://edh-www.adw.uni-heidelberg.de/).')
 st.write('[Source code](https://github.com/petrifiedvoices/ancient-classifier), forked from [CHCAA Ancient-classifier](https://github.com/centre-for-humanities-computing/ancient-classifier/). Outcome of the [Epigraphic Roads](https://github.com/sdam-au/epigraphic_roads/) project.')
