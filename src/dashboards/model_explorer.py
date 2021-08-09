@@ -67,7 +67,7 @@ st.write('The Classifier is trained on the text of 50,000 inscriptions to come u
 
 st.header('How do I classify my text?')
 st.write('1. Choose the format of your text in the dropdown menu in the left-side panel:')
-st.write('      a) does your text has the original format as-is on inscriptions, including unexpanded abbreviations and no modern additions or reconstructions >>> choose `Text as-is on inscriptions`;)
+st.write('      a) does your text has the original format as-is on inscriptions, including unexpanded abbreviations and no modern additions or reconstructions >>> choose `Text as-is on inscriptions`;')
 st.write('      b) does your text contain expanded abbreviations and modern reconstructions that are not present on the inscribed object >>> choose `Reconstructed text` option.')
 st.write('2. Insert the text into the input window below and click the `Classify me!` button.')
 st.write('3. The classifical results will appear below. The closer any typological variant is to 1, the higher is the probability of your text belonging to that category. If ambiguous, too short, or too fragmentary, the text can easily belong to multiple categories, without one clear favourite.')
