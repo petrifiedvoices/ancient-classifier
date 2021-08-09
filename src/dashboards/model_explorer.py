@@ -62,9 +62,9 @@ st.header("What does it do?")
 st.write('Scenario 1: Imagine you are an archaeologist, excavating an ancient settlement and you have found an inscription with Latin text. You are not an expert on inscriptions, but knowing what kind of text you are dealing with, while still in the field, would help your immediate understanding of the archaeological situation and would help you guide the excavation in the right direction.')
 st.write('Scenario 2: Imagine you are a museum archivist and you have found an unlabelled inscription in the depository. You would like to be able to record in a museum catalogue its type, so the future experts can find it more easily.')
 
-st.write('Enter the text of the inscription to the Classifier and you will know what kind of inscription you are dealing with!')  
+st.write('The Classifier is trained on the text of 50,000 inscriptions to come up with the most probable epigraphic classification.')
 
-st.write('The Classifier assigns standard typologies of inscriptions to a given Latin text and shows the confidence of assigned classifications.')
+st.subheader('Enter the text of the inscription to the Classifier and you will know what kind of inscription you are dealing with!')  
     
 user_input = st.text_area("Insert text", default_input)
 
