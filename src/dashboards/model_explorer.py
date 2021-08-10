@@ -72,9 +72,10 @@ st.markdown('1. Choose the best-fitting model in the dropdown menu in the left-s
 st.markdown('- does your text have the format *as-is* on the inscribed medium, including unexpanded abbreviations, but does not contain any modern additions or editorial reconstructions, choose `Text as-is on inscriptions` option')
 st.markdown('- does your text contain editorial additions, such as expanded abbreviations and modern reconstructions that are not present on the inscribed object, choose `Reconstructed text` option')
 st.markdown('2. Insert the text into the input window below and click the `Classify me!` button.')
-st.markdown('3. The results will appear below as confidence levels. The closer any typological variant is to 1, the more confident the model is that your text belong to that category. If the values are negative or closer to -1, the model is less confident. If ambiguous, too short, or too fragmentary, the text can easily belong to multiple categories, without one clear favourite.')
-st.markdown('4. If you don\'t have any inscriptions at hand but still want to play, use our sample inscription [`HD000470`](https://edh-www.adw.uni-heidelberg.de/edh/inschrift/HD000470) already present in the input window.')
-st.markdown('Don\'t forget - the `Epigraphic Classifier` is still experimentary and so may be the results!')
+st.markdown('3. The results will appear below as confidence levels. The higher the value is for a given typological variant, the more confident the model is that your text belongs to that category. If the values are negative values, the model is less confident. If ambiguous, too short, or too fragmentary, the text can easily belong to multiple categories, without one clear favourite.')
+st.markdown('4. You can interact with the results: hover over the typological variant to see a confidence value. Click on the three horizontal dots menu in the top right corner of the plot with results to can save the plot as SVG or PNG.')
+st.markdown('5. If you don\'t have any inscriptions at hand but still want to play, use our sample inscription [`HD000470`](https://edh-www.adw.uni-heidelberg.de/edh/inschrift/HD000470) already present in the input window.')
+st.markdown('*Don\'t forget - the `Epigraphic Classifier` is still experimentary and so may be the results!*')
     
 user_input = st.text_area("Insert input text", default_input)
 
