@@ -39,6 +39,7 @@ st.set_page_config(
 # ===
 # Sidebar
 # ===
+
 with st.sidebar:
     # track which model to use 
     model_choice = st.selectbox(
@@ -46,17 +47,18 @@ with st.sidebar:
         ('Text as-is on inscriptions (conservative text)', 'Reconstructed text (interpretive text)')
     )
 
-    if model_choice == 'Text as-is on inscriptions (conservative text)':
-        default_input = 'Accae l Myrine Accae l Sympherusae M Ant M l Ero poma'
-
-    elif model_choice == 'Reconstructed text (interpretive text)':
+    if model_choice == 'Reconstructed text (interpretive text)':
         default_input = 'Accae mulieris libertae Myrine Accae mulieris libertae Sympherusae Marco Antonio Marci liberto Ero pomario'
+
+    elif model_choice == 'Text as-is on inscriptions (conservative text)':
+        default_input = 'Accae l Myrine Accae l Sympherusae M Ant M l Ero poma'
 
 
 # ===
 # Classify input
 # ===
-st.title('Epigraphic Classifier for Latin inscriptions')
+
+st.title('Epigrapher-ex-machina: machine-learning classifier for Latin inscriptions')
 
 st.header('What does it do?')
 st.write('*Scenario 1:* Imagine you are an archaeologist, excavating an ancient settlement and you have found an inscription with Latin text. You are not an expert on inscriptions, but knowing what kind of text you are dealing with, while still in the field, would help your immediate understanding of the archaeological situation and would help you guide the excavation in the right direction.')
@@ -66,13 +68,13 @@ st.info('Enter the text of the inscription to the Classifier and it will tell yo
 st.write('The Classifier is trained on the text of 50,000 inscriptions to come up with the most probable epigraphic classification and its alternatives. However, you still should consult a human-epigrapher to be 100% sure!')
 
 st.header('How do I classify my text?')
-st.write('1. Choose the best-fitting model in the dropdown menu in the left-side panel:')
-st.write('---- a) does your text has the original format as-is on the inscribed medium, including single letters as unexpanded abbreviations and no modern additions or editorial reconstructions >>> choose `Text as-is on inscriptions`;')
-st.write('---- b) does your text contain editorial additions, such as expanded abbreviations and modern reconstructions that are not present on the inscribed object >>> choose `Reconstructed text` option.')
-st.write('2. Insert the text into the input window below and click the `Classify me!` button.')
-st.write('3. The results will appear below as confidence levels. The closer any typological variant is to 1, the more confident the model is that your text belong to that category. If the values are negative or closer to -1, the model is less confident. If ambiguous, too short, or too fragmentary, the text can easily belong to multiple categories, without one clear favourite.')
-st.write('4. If you don\t have any inscriptions at hand but still want to play, use our sample inscription [`HD000470`](https://edh-www.adw.uni-heidelberg.de/edh/inschrift/HD000470) already present in the input window.')
-st.write('Don\' forget - the `Epigraphic Classifier` is still experimentary and so may be the results!')
+st.markdown('1. Choose the best-fitting model in the dropdown menu in the left-side panel:')
+st.markdown('- does your text have the format *as-is* on the inscribed medium, including unexpanded abbreviations, but does not contain any modern additions or editorial reconstructions, choose `Text as-is on inscriptions` option')
+st.markdown('- does your text contain editorial additions, such as expanded abbreviations and modern reconstructions that are not present on the inscribed object, choose `Reconstructed text` option')
+st.markdown('2. Insert the text into the input window below and click the `Classify me!` button.')
+st.markdown('3. The results will appear below as confidence levels. The closer any typological variant is to 1, the more confident the model is that your text belong to that category. If the values are negative or closer to -1, the model is less confident. If ambiguous, too short, or too fragmentary, the text can easily belong to multiple categories, without one clear favourite.')
+st.markdown('4. If you don\'t have any inscriptions at hand but still want to play, use our sample inscription [`HD000470`](https://edh-www.adw.uni-heidelberg.de/edh/inschrift/HD000470) already present in the input window.')
+st.markdown('Don\'t forget - the `Epigraphic Classifier` is still experimentary and so may be the results!')
     
 user_input = st.text_area("Insert input text", default_input)
 
@@ -110,8 +112,8 @@ if st.button('Classify me!'):
         plot_bar_confidence(confidence_df)
     )
 
-st.header('About Classifier')
-st.write('Authors: Petra Hermankova, postdoc at Aarhus University, [ORCID:0000-0002-6349-0540](https://orcid.org/0000-0002-6349-0540), [Github](https://github.com/petrifiedvoices) & Jan Kostkan, CHCAA, Aarhus University, [GitHub](https://github.com/supplyandcommand)')
+st.header('About Epigraphic Classifier')
+st.write('Authors: Petra Hermankova, postdoc at Aarhus University, [ORCID:0000-0002-6349-0540](https://orcid.org/0000-0002-6349-0540), [@petrifiedvoices on Github](https://github.com/petrifiedvoices) & Jan Kostkan, CHCAA, Aarhus University, [@supplyandcommand on GitHub](https://github.com/supplyandcommand)')
 st.write('The model was trained on Latin inscriptions from the [Epigraphic Database Heidelberg](https://edh-www.adw.uni-heidelberg.de/).')
 st.write('[Source code](https://github.com/petrifiedvoices/ancient-classifier), forked from [CHCAA Ancient-classifier](https://github.com/centre-for-humanities-computing/ancient-classifier/). Outcome of the [Epigraphic Roads](https://github.com/sdam-au/epigraphic_roads/) project.')
          
@@ -119,7 +121,9 @@ st.write('[Source code](https://github.com/petrifiedvoices/ancient-classifier), 
 # width is used to set the width of an image
 
 # st.image(img, width=200)    
-st.write('We welcome any feedback or criticism at petra.hermankova@cas.au.dk!')
+st.write('We welcome any feedback and criticism at petra.hermankova@cas.au.dk!')
+
 # ===
 # More info about the model
 # ===
+
