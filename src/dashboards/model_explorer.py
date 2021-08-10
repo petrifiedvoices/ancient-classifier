@@ -113,16 +113,17 @@ if st.button('Classify me!'):
         plot_bar_confidence(confidence_df)
     )
 
-st.header('About Epigraphic Classifier')
+st.header('About the Epigraphic Classifier')
 st.write('Authors: Petra Hermankova, postdoc at Aarhus University, [ORCID:0000-0002-6349-0540](https://orcid.org/0000-0002-6349-0540), [@petrifiedvoices on Github](https://github.com/petrifiedvoices) & Jan Kostkan, CHCAA, Aarhus University, [@supplyandcommand on GitHub](https://github.com/supplyandcommand)')
 st.write('The model was trained on Latin inscriptions from the [Epigraphic Database Heidelberg](https://edh-www.adw.uni-heidelberg.de/).')
-st.write('[Source code](https://github.com/petrifiedvoices/ancient-classifier), forked from [CHCAA Ancient-classifier](https://github.com/centre-for-humanities-computing/ancient-classifier/). Outcome of the [Epigraphic Roads](https://github.com/sdam-au/epigraphic_roads/) project.')
-         
+st.write('[Source code](https://github.com/petrifiedvoices/ancient-classifier), forked from [CHCAA Ancient-classifier](https://github.com/centre-for-humanities-computing/ancient-classifier/).')
+st.markdown('The Epigraphic Classifier was developed as part of the Digital Literacy 2.0 Program, 2020-2021, as on of the outcomes of the [Epigraphic Roads](https://github.com/sdam-au/epigraphic_roads/) project by Petra Hermankova, Aarhus University; created in collaboration with the Centre for Humanities Computing Aarhus (CHCAA).')
+
 # display image using streamlit
 # width is used to set the width of an image
 
 # st.image(img, width=200)    
-st.write('We welcome any feedback and criticism at petra.hermankova@cas.au.dk!')
+st.write('We welcome any feedback and suggestions at petra.hermankova@cas.au.dk!')
 
 # ===
 # More info about the model
