@@ -67,6 +67,9 @@ st.write('*Scenario 2:* Imagine you are a museum archivist and you have found an
 st.info('Enter the text of the inscription to the Classifier and it will tell you what kind of inscription you are dealing with!')  
 st.write('The Classifier is trained on the text of 50,000 inscriptions to come up with the most probable epigraphic classification and its alternatives. However, you still should consult a human-epigrapher to be 100% sure!')
 
+st.image("src/dashboards/img/F000100_HD033469.jpeg", width=300) 
+
+
 st.header('How do I classify my text?')
 st.markdown('1. Choose the best-fitting model in the dropdown menu in the left-side panel:')
 st.markdown('- does your text have the format *as-is* on the inscribed medium, including unexpanded abbreviations, but does not contain any modern additions or editorial reconstructions, choose `Text as-is on inscriptions` option')
@@ -122,7 +125,7 @@ st.markdown('The Epigraphic Classifier was developed as part of the Digital Lite
 # display image using streamlit
 # width is used to set the width of an image
 
-# st.image(img, width=200)    
+
 st.write('We welcome any feedback and suggestions at petra.hermankova@cas.au.dk!')
 
 # ===
