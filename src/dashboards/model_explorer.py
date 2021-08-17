@@ -67,7 +67,7 @@ st.write('*Scenario 2:* Imagine you are a museum archivist and you have found an
 st.info('Enter the text of the inscription to the Classifier and it will tell you what kind of inscription you are dealing with!')  
 st.write('The Classifier is trained on the text of 50,000 inscriptions to come up with the most probable epigraphic classification and its alternatives. However, you still should consult a human-epigrapher to be 100% sure!')
 
-st.image("src/dashboards/img/F000100_HD033469.jpeg", width=300) 
+st.image("src/dashboards/F000100_HD033469.jpeg", width=300) 
 
 
 st.header('How do I classify my text?')
