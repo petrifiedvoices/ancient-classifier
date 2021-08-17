@@ -71,7 +71,7 @@ from PIL import Image
 
 image = Image.open('src/dashboards/F000100_HD033469.jpeg')
 
-st.image(image, width=100%, caption="Inscription HD033469 from Lambaesis in Numidia, http://edh-www.adw.uni-heidelberg.de/edh/foto/F000100", use_column_width=None, clamp=False, channels='RGB', output_format='auto') 
+st.image(image, caption="Inscription HD033469 from Lambaesis in Numidia, http://edh-www.adw.uni-heidelberg.de/edh/foto/F000100", use_column_width=None, clamp=False, channels='RGB', output_format='auto') 
 
 
 st.header('How do I classify my text?')
