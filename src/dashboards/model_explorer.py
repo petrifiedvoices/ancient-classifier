@@ -67,9 +67,11 @@ st.write('*Scenario 2:* Imagine you are a museum archivist and you have found an
 st.info('Enter the text of the inscription to the Classifier and it will tell you what kind of inscription you are dealing with!')  
 st.write('The Classifier is trained on the text of 50,000 inscriptions to come up with the most probable epigraphic classification and its alternatives. However, you still should consult a human-epigrapher to be 100% sure!')
 
+from PIL import Image
 
+image = Image.open('./F000100_HD033469.jpeg')
 
-st.image("https://github.com/petrifiedvoices/ancient-classifier/blob/master/src/dashboards/F000100_HD033469.jpeg", width=300, caption="Inscription HD033469 from Lambaesis in Numidia, http://edh-www.adw.uni-heidelberg.de/edh/foto/F000100", use_column_width=None, clamp=False, channels='RGB', output_format='auto') 
+st.image(image, width=300, caption="Inscription HD033469 from Lambaesis in Numidia, http://edh-www.adw.uni-heidelberg.de/edh/foto/F000100", use_column_width=None, clamp=False, channels='RGB', output_format='auto') 
 
 
 st.header('How do I classify my text?')
